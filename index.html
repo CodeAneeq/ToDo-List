@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- box of todo list -->
+      <div class="box">
+        <h1>ToDo List <img src="./assets/images/icons8-list.gif" /></h1>
+        <div class="input-bt">
+          <input type="text" placeholder="Enter ToDo Task" id="input" />
+          <button id="Add" onclick="addTask()">Add</button>
+          <!-- <button id="save">Save</button> -->
+          <button id="delAll" onclick="delAll()">Delete All</button>
+        </div>
+
+        <div class="div">
+          <ul id="ul" onclick="completeTask('this')"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

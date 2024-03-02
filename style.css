@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* background */
+
+.container-fluid {
+  background-color: #02022c;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* content box */
+
+.box {
+  width: 600px;
+  height: 550px;
+  background-color: white;
+  border-radius: 13px;
+}
+
+/* heading */
+
+h1 {
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #02022c;
+  font-weight: bolder;
+}
+
+img {
+  width: 25px;
+  height: 25px;
+}
+
+#input {
+  width: 330px;
+  height: 50px;
+  border: 1px solid #02022c;
+  border-radius: 5px;
+  margin: 30px 10px 50px 20px;
+  font-size: larger;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#Add {
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #02022c;
+  color: white;
+  border: none;
+  font-size: larger;
+}
+
+#Add:hover {
+  background-color: #add8e6;
+  color: #02022c;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* #save {
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #02022c;
+  color: white;
+  border: none;
+  font-size: larger;
+  display: none;
+} */
+
+#delAll {
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #02022c;
+  color: white;
+  border: none;
+  font-size: large;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+#delAll:hover {
+  background-color: #add8e6;
+  color: #02022c;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* lists */
+
+ul {
+  list-style-type: none;
+  margin-left: 20px;
+  margin-right: 20px;
+  overflow-y: auto;
+  max-height: 300px;
+  overflow-x: hidden;
+
+  scrollbar-width: thin;
+  scrollbar-color: #02022c #add8e6;
+}
+
+li {
+  background-color: #add8e6;
+  width: 550px;
+  height: 50px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 5px 5px 5px;
+  align-items: center;
+  position: relative;
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: #02022c;
+}
+
+.trash {
+  color: white;
+  background-color: #02022c;
+  width: 45px;
+  height: 40px;
+  padding: 9px 5px 5px 5px;
+  margin-right: 6px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+.trash:hover {
+  background-color: #add8e6;
+  color: #02022c;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit {
+  color: white;
+  background-color: #02022c;
+  width: 45px;
+  height: 40px;
+  padding: 9px 5px 5px 5px;
+  margin-right: 5px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+.edit:hover {
+  background-color: #add8e6;
+  color: #02022c;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.adding-task-animation {
+  animation: addingTask 0.5s ease-in-out;
+}
+
+@keyframes addingTask {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* media queries */
+
+@media (max-width: 768px) {
+  .box {
+    padding: 10px;
+    width: 500px;
+    height: 450px;
+  }
+
+  #input {
+    width: 220px;
+  }
+
+  ul {
+    overflow-y: auto;
+    max-height: 220px;
+  }
+
+  li {
+    width: 440px;
+  }
+}
+
+@media (max-width: 425px) {
+  .container-fluid {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .box {
+    padding: 10px;
+    width: 250px;
+    height: 400px;
+  }
+
+  #input {
+    width: 220px;
+    margin: 10px 0px 20px 5px;
+  }
+
+  #Add {
+    margin-left: 5px;
+    width: 100px;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+
+  #delAll {
+    width: 100px;
+    margin-left: 11px;
+    height: 40px;
+    font-size: large;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    overflow-y: auto;
+    max-height: 150px;
+    margin: 0;
+  }
+
+  .div {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    width: 215px;
+    margin: 10px 5px 0px 5px;
+    height: 40px;
+  }
+
+  .edit {
+    width: 35px;
+    height: 35px;
+  }
+
+  .trash {
+    width: 35px;
+    height: 35px;
+  }
+}
